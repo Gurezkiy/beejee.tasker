@@ -76,7 +76,8 @@ $( document ).ready(() => {
                 success: (data) => {
                     data = JSON.parse(data);
                     editedTask.text = taskText;
-                    $(`td[data-id='tasks-${data.data.id}-text']`).text(taskText);
+                    $(`p[data-id='tasks-${data.data.id}-text']`).text(taskText);
+                    $(`small[data-id='tasks-${data.data.id}-editted']`).show();
                     $('#task-add-modal').modal('hide');
                 }
             });

@@ -169,8 +169,12 @@
                                     <td>
                                         <?php echo $task->email; ?>
                                     </td>
-                                    <td data-id="tasks-<?php echo $task->id; ?>-text">
-                                        <?php echo $task->text; ?>
+                                    <td>
+                                        <small data-id="tasks-<?php echo $task->id; ?>-editted" class="text-danger" <?php if(!$task->editted) echo 'style="display: none"'; ?>>[Отредактировано администратором]</small>
+                                        <p data-id="tasks-<?php echo $task->id; ?>-text">
+                                            <?php echo $task->text; ?>
+                                        </p>
+
                                     </td>
                                     <?php if(!is_null($user)): ?>
                                         <td>

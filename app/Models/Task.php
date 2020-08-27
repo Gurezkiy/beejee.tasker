@@ -16,6 +16,7 @@ class Task
     public  $name;
     public  $text;
     public  $completed;
+    public  $editted;
 
     public function save()
     {

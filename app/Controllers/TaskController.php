@@ -74,8 +74,9 @@ class TaskController extends Controller
         if(isset($this->params['task']))
         {
             $item->text = DB::myhsc($this->params['task']);
+            $item->editted = 1;
         }
-        $sqlUpdate = "UPDATE `tasks` SET `completed`='$item->completed', `text`='$item->text' WHERE  `id`='$id'";
+        $sqlUpdate = "UPDATE `tasks` SET `completed`='$item->completed', `text`='$item->text', `editted`='$item->editted' WHERE  `id`='$id'";
         DB::update($sqlUpdate);
         $obj->data = $item;
         echo json_encode($obj);

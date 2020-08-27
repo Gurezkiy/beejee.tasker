@@ -14,7 +14,8 @@ CREATE TABLE `tasks` (
   `email` varchar(255) NOT NULL,
   `name` varchar(255) NOT NULL,
   `text` text NOT NULL,
-  `completed` tinyint(1) NOT NULL DEFAULT '0'
+  `completed` tinyint(1) NOT NULL DEFAULT '0',
+  `editted` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE `users` (
@@ -35,7 +36,7 @@ ALTER TABLE `users`
 
 
 ALTER TABLE `tasks`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 ALTER TABLE `users`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
