@@ -2,6 +2,7 @@
 
 ### Зависимоси
 * [php v.7.1.3](https://www.php.net/releases/index.php)   
+* [MySQL 5.7.3](https://www.mysql.com/downloads/)
 
 
 ### Установка
