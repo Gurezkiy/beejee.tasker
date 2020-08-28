@@ -49,6 +49,7 @@ class TaskController extends Controller
         $task->name = $this->params['name'];
         $task->text = $this->params['task'];
         $task->save();
+        $_SESSION['task_success'] = true;
         header('Location: /');
     }
     public function update($id)

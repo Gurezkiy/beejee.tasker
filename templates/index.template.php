@@ -54,6 +54,14 @@
                             <span class="flex-spacer"></span>
                             <button type="button" class="btn btn-primary" data-toggle="modal" id="openModalAdd">Добавить</button>
                         </h5>
+                        <?php if(isset($_SESSION['task_success'])): ?>
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                <strong>Успешно!</strong> Ваша задача успешно добавлена.
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        <?php unset($_SESSION['task_success']); endif; ?>
                         <table class="table tasks">
                             <thead>
                             <tr>
